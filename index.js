@@ -1,8 +1,9 @@
-const fs = require("fs")
+const checkDomains = require("./utils/domain-loader")
 
-// Read the text file containing the list of domains
-const domains = fs.readFileSync("domains.txt", "utf8").split("\n")
+// Get the list of domains from the domains.txt file.
+const domains = checkDomains("domains.txt")
 
-// Print the domains to the console
-console.log("Domains found in the text file:")
-domains.forEach((domain) => console.log(domain))
+// Print each domain to the console.
+domains.forEach((domain) => {
+    console.log(domain)
+})
