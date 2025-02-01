@@ -8,6 +8,15 @@ const domains = checkDomains("domains.txt")
 domains.forEach(async (domain) => {
     const expiryDate = await checkDomainExpiry(domain)
 
+    if (expiryDate === null) {
+        console.log(`Error checking ${domain}`)
+        return
+    }
+
     // Print the domain and its expiry date to the console.
-    console.log(`${domain} expires on ${expiryDate}`)
+    console.log(
+        `Domain ${domain} expires on ${expiryDate.toLocaleString("en-GB", {
+            timeZone: "UTC",
+        })}`
+    )
 })

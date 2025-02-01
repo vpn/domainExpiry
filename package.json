@@ -1,9 +1,11 @@
 {
     "name": "domainexpiry",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "tool to check list of domains for upcoming expiry and notify when due for renewal",
     "main": "index.js",
     "dependencies": {
+        "axios": "^1.6.0",
+        "discord.js": "^14.13.0",
         "dotenv": "^16.0.3",
         "fs": "^0.0.1-security",
         "whois": "^2.14.0",
