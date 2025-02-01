@@ -1,6 +1,0 @@
-google.com
-facebook.com
-twitter.com
-github.com
-youtube.com
-apple.com
